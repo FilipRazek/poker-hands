@@ -1,10 +1,13 @@
 import parseCard from "./parseCard";
-import { Card } from "./types";
+import { Hand } from "./types";
 
-const parseHand = (hand: string): Card[] => {
+const parseHand = (cards: string): Hand => {
   // Parse a hand of any size into a Card list
-  const cards = hand.split(" ");
-  return cards.map(parseCard);
+  const hand = cards.split(" ").map(parseCard);
+  if (hand.length !== 5) {
+    throw new Error("Invalid hand size");
+  }
+  return hand;
 };
 
 export default parseHand;

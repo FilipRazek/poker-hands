@@ -1,6 +1,6 @@
-import { Card } from "./types";
+import { CardCount, Hand } from "./types";
 
-export default (cards: Card[]): number[] => {
+export default (cards: Hand): CardCount => {
   const cardCounts = Array.from({ length: 13 }, () => 0);
   cards.forEach(({ value }) => {
     cardCounts[value - 2] += 1;

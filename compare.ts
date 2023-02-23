@@ -1,5 +1,4 @@
-// -1: First hand is worse, 0: hands are equal, 1: First hand is better
-type ComparisonResult = -1 | 0 | 1;
+import { ComparisonResult } from "./helpers/types";
 
 const compareHands = (_hand1: string, _hand2: string): ComparisonResult => {
   return 0;

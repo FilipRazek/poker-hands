@@ -1,9 +1,9 @@
 import getCardCount from "./getCardCount";
-import { Card } from "./types";
+import { Hand } from "./types";
 
 describe("getCardCount", () => {
   it("should correctly count cards in a hand", () => {
-    const hand: Card[] = [
+    const hand: Hand = [
       { value: 2, suit: "H" },
       { value: 2, suit: "D" },
       { value: 3, suit: "C" },
