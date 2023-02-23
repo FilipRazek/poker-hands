@@ -1,4 +1,4 @@
-export default (card: string) => {
+export default (card: string): number => {
   const cardMap: Record<string, number> = {
     T: 10,
     J: 11,
