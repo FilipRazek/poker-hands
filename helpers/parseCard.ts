@@ -1,11 +1,5 @@
 import getCardValue from "./getCardValue";
-
-type Suit = "C" | "D" | "H" | "S";
-
-export type Card = {
-  value: number;
-  suit: Suit;
-};
+import { Card, Suit } from "./types";
 
 export default (card: string): Card => {
   // Check the format of the card string
