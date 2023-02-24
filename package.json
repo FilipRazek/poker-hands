@@ -4,7 +4,7 @@
   "description": "",
   "main": "compare.ts",
   "scripts": {
-    "start": "ts-node compare.ts",
+    "compare": "ts-node compare.ts",
     "lint": "eslint .",
     "test": "jest"
   },
