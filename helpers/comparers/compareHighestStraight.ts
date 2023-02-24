@@ -1,7 +1,10 @@
-import { CardCount, ComparisonResult } from "../types";
+import { ComparisonResult, EnhancedHand } from "../types";
 import getHighestStraight from "./getHighestStraight";
 
-export default (hand1: CardCount, hand2: CardCount): ComparisonResult => {
+export default (
+  { count: hand1 }: EnhancedHand,
+  { count: hand2 }: EnhancedHand
+): ComparisonResult => {
   const hand1HighestStraight = getHighestStraight(hand1);
   const hand2HighestStraight = getHighestStraight(hand2);
 

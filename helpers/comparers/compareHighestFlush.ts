@@ -1,7 +1,10 @@
-import { ComparisonResult, Hand } from "../types";
+import { ComparisonResult, EnhancedHand } from "../types";
 import getHighestFlush from "./getHighestFlush";
 
-export default (hand1: Hand, hand2: Hand): ComparisonResult => {
+export default (
+  { hand: hand1 }: EnhancedHand,
+  { hand: hand2 }: EnhancedHand
+): ComparisonResult => {
   const hand1HighestFlush = getHighestFlush(hand1);
   const hand2HighestFlush = getHighestFlush(hand2);
 

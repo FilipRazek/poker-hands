@@ -12,3 +12,8 @@ export type Card = {
 };
 
 export type Hand = Card[];
+
+export type EnhancedHand = {
+  hand?: Hand;
+  count?: CardCount;
+};

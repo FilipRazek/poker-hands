@@ -23,6 +23,5 @@
     ],
     "@typescript-eslint/explicit-function-return-type": "error",
     "no-console": "warn"
-  },
-  "ignorePatterns": ["src/__tests__/assets/*.ts"]
+  }
 }

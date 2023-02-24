@@ -18,24 +18,11 @@ export default (stringHand1: string, stringHand2: string): ComparisonResult => {
   const cardCount1 = getCardCount(hand1);
   const cardCount2 = getCardCount(hand2);
 
-  const straightFlushResult = compareHighestStraightFlush(hand1, hand2);
-  if (straightFlushResult !== 0) {
-    return straightFlushResult;
-  }
-
-  const firstChecks = [compareHighestFour, compareHighestFullHouse];
-  for (const check of firstChecks) {
-    const result = check(cardCount1, cardCount2);
-    if (result !== 0) {
-      return result;
-    }
-  }
-
-  const flushResult = compareHighestFlush(hand1, hand2);
-  if (flushResult !== 0) {
-    return flushResult;
-  }
-  const lastChecks = [
+  const checks = [
+    compareHighestStraightFlush,
+    compareHighestFour,
+    compareHighestFullHouse,
+    compareHighestFlush,
     compareHighestStraight,
     compareHighestThree,
     compareHighestTwoPair,
@@ -43,8 +30,11 @@ export default (stringHand1: string, stringHand2: string): ComparisonResult => {
     compareHighestCard,
   ];
 
-  for (const check of lastChecks) {
-    const result = check(cardCount1, cardCount2);
+  for (const check of checks) {
+    const result = check(
+      { hand: hand1, count: cardCount1 },
+      { hand: hand2, count: cardCount2 }
+    );
     if (result !== 0) {
       return result;
     }
