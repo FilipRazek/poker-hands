@@ -6,10 +6,7 @@ import { CardCount } from "../types";
  * then the returned list will contain the card values of the
  * highest two pairs and the highest kicker.
  */
-export const getHighestCardsFromMask = (
-  hand: CardCount,
-  mask: number[]
-): number[] | undefined => {
+export default (hand: CardCount, mask: number[]): number[] | undefined => {
   if (mask.reduce((a, b) => a + b) !== 5) {
     throw new Error(`Invalid mask: ${mask.join(";")}`);
   }

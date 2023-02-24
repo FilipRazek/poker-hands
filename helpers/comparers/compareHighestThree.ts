@@ -1,5 +1,5 @@
 import { CardCount, ComparisonResult } from "../types";
-import { getHighestCardsFromMask } from "./getHighestCardsFromMask";
+import getHighestCardsFromMask from "./getHighestCardsFromMask";
 
 export default (hand1: CardCount, hand2: CardCount): ComparisonResult => {
   const mask = [3, 1, 1];
