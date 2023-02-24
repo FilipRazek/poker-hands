@@ -11,5 +11,5 @@ export default (hand: Hand): number => {
       highestCard = card.value;
     }
   }
-  return highestCard - 2;
+  return highestCard;
 };

@@ -1,10 +1,10 @@
 export default (card: string): number => {
   const cardMap: Record<string, number> = {
-    T: 10,
-    J: 11,
-    Q: 12,
-    K: 13,
-    A: 14,
+    T: 8,
+    J: 9,
+    Q: 10,
+    K: 11,
+    A: 12,
   };
   if (cardMap[card]) {
     return cardMap[card];
@@ -13,5 +13,5 @@ export default (card: string): number => {
   if (!cardValue) {
     throw new Error(`Invalid card value: ${card}`);
   }
-  return parseInt(cardValue, 10);
+  return parseInt(cardValue, 10) - 2;
 };
