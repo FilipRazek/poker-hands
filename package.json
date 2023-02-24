@@ -5,6 +5,7 @@
   "main": "compare.ts",
   "scripts": {
     "compare": "ts-node compare.ts",
+    "solve-euler": "cd euler && ts-node solution.ts",
     "lint": "eslint .",
     "test": "jest"
   },
