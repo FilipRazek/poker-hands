@@ -4,4 +4,4 @@ A small util project to compare poker hands. To run it in the terminal, run `npm
 
 Built with TDD, using Jest.
 
-Can be used to solve a certain Project Euler problem ;)
+Can also be used to solve the [Poker hands problem](https://projecteuler.net/problem=54) from Project Euler. To do so, run `npm run solve-euler`.
