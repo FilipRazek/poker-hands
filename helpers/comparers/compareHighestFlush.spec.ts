@@ -23,17 +23,25 @@ const noFlush: Hand = [
   { suit: "H", value: 0 },
 ];
 it("should correctly compare the highest flush", () => {
-  expect(compareHighestFlush(flushWithAce, flushWithKing)).toEqual(1);
+  expect(
+    compareHighestFlush({ hand: flushWithAce }, { hand: flushWithKing })
+  ).toEqual(1);
 });
 
 it("should return -1 if the second hand has the highest flush", () => {
-  expect(compareHighestFlush(flushWithKing, flushWithAce)).toEqual(-1);
+  expect(
+    compareHighestFlush({ hand: flushWithKing }, { hand: flushWithAce })
+  ).toEqual(-1);
 });
 
 it("should correctly compare when there is no flush", () => {
-  expect(compareHighestFlush(flushWithAce, noFlush)).toEqual(1);
+  expect(
+    compareHighestFlush({ hand: flushWithAce }, { hand: noFlush })
+  ).toEqual(1);
 });
 
 it("should return 0 if the hands are equal", () => {
-  expect(compareHighestFlush(flushWithAce, flushWithAce)).toEqual(0);
+  expect(
+    compareHighestFlush({ hand: flushWithAce }, { hand: flushWithAce })
+  ).toEqual(0);
 });
