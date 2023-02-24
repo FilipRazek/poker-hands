@@ -1,7 +1,7 @@
 import compareHands from "../compareHands";
 import { readFileSync } from "fs";
 
-const hands = readFileSync("poker_hands.txt", "utf8").split("\n");
+const hands = readFileSync("poker_hands.txt", "utf8").split(/\r?\n/);
 
 const parseHand = (
   hand: string
